@@ -8,7 +8,7 @@ import it.epicode.be.catalogolibri.model.Categoria;
 
 public interface CategoriaRepository extends JpaRepository<Categoria, Long> {
 	
-	Page<Categoria> findByNomeCategoria(String nome, Pageable pageable);
+	Page<Categoria> findByNome(String nome, Pageable pageable);
 
 }
 

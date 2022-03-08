@@ -32,12 +32,12 @@ public class Libro {
 	private @NonNull double prezzo;
 
 	@ManyToMany
-	@JoinTable(name = "libro_categoria", joinColumns = @JoinColumn(name = "libro_id", referencedColumnName = "id"))
+	@JoinTable(name = "libro_categorie", joinColumns = @JoinColumn(name = "libro_id"))
 	@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 	private List<Categoria> categorie = new ArrayList<>();
 	
 	@ManyToMany
-	@JoinTable(name = "libro_autore", joinColumns = @JoinColumn(name = "autore_id", referencedColumnName = "id"))
+	@JoinTable(name = "libro_autori", joinColumns = @JoinColumn(name = "autore_id"))
 	@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 	private List<Autore> autori = new ArrayList<>();
 	

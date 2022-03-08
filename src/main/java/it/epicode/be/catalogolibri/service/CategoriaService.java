@@ -22,7 +22,7 @@ public class CategoriaService {
 	}
 
 	public Page<Categoria> findByNome(String nome, Pageable pageable) {
-		return categoriaRepository.findByNomeCategoria(nome, pageable);
+		return categoriaRepository.findByNome(nome, pageable);
 	}
 
 	public Page<Categoria> findAll(Pageable pageable) {
